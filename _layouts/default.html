@@ -1,0 +1,45 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Mathias Goyheneche | {{ page.title }}</title>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div id="logo">
+                <a href="/" class="logo">
+                    <svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Front-page" transform="translate(-610, -31)">
+                                <rect id="Rectangle" fill="#e66017" x="610" y="31" width="36" height="36" rx="8"></rect>
+                                <path d="M628,42.9718253 L637.916905,59.5 L618.083095,59.5 L628,42.9718253 Z" id="Triangle" stroke="#e66017" fill="#FFFFFF" transform="translate(628, 51) rotate(-180) translate(-628, -51)"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <nav id="nav-burger">
+                <input type="checkbox" name="nav-check" id="nav-check">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul>
+                    <li><a href="/a-propos/">A propos</a></li>
+                    <li><a href="/apps/">Apps</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {{ content }}
+</body>
+</html>

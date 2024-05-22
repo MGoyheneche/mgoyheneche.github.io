@@ -1,12 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Hello World!!!</h1>
-</body>
-</html>
+---
+title: Technicien son 
+layout: default
+---
+
+<section class="hero">
+    <div class="catch">
+        <div class="picture">
+            <img src="imgs/mathias_goyheneche.jpg" alt="">
+        </div>
+        <div class="caption">
+            <h1 class="greeting">Mathias Goyheneche</h1>
+            <ul class="activities">
+                <li>technique du spectacle</li>
+                <li>développement</li>
+                <li>design</li>
+            </ul>
+        </div>
+    </div>
+    <div class="presentation">
+        <p>
+            Bonjour, je suis <a href="/" class="underline">Mathias</a>, un <a href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2ZibXA2b3lrNjk3dWpuMHpvMG02cWMwOGJ2OHN2eTdob2c3NWt3YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lVe7D0DWchA99rwUsx/giphy.gif">technicien son</a> spécialisé dans les 
+            musiques acoustiques. Quand je ne joue pas avec des micros, 
+            j’aime créer des <a href="/apps/">applications</a> <span class="fancy-font">&</span> écrire des petits mémos dans mon <a href="/blog/">blog</a>.
+        </p>
+        
+    </div>
+    <div class="ctas">
+        <div class="ctas-wrapper">
+            <a href="mailto:{{ site.email }}" class="cta-primary">Contactez-moi</a>
+        </div>
+    </div>
+</section>
+<section class="latest-posts">
+    <div class="title-wrapper">
+        <h2>Derniers articles</h2>
+    </div>
+    {% for post in site.posts %}
+        <article>
+            <span class="date"><a href="#">{{ post.date | date: "%d-%m-%Y"}}</a></span>
+            <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            <span class="category-wrapper">
+                <a href="#"><span class="category">{{ post.category }}</span></a>
+            </span>
+        </article>
+    {% endfor %}
+</section>

@@ -1,0 +1,98 @@
+#nav-burger span {
+    display: block;
+    width: 2rem;
+    height: 5px;
+    margin-left: auto;
+    border-radius: 1rem;
+    background-color: $base-color;
+    transition: all 0.3s ease;
+}
+
+#nav-burger span + span {
+    margin-top: 0.4rem;
+}
+
+#nav-burger label {
+    padding: 5px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-burger label:hover {
+    cursor: pointer;
+}
+
+#nav-burger label:hover span:first-child {
+    width: 1.7rem;
+}
+
+#nav-burger label:hover span:nth-child(2) {
+    width: 1.4rem;
+}
+
+header {
+    @include row;
+    padding: 1rem 0;
+}
+
+.header-wrapper {
+    grid-column: m1-end/m2-start;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0 0 0 0;
+    position: absolute;
+    left: 0;
+    top: -100rem;
+    padding: 0;
+    transition: opacity 0.3s ease;
+    background: $light-color;
+    width: 100%;
+}
+
+nav li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    color: $base-color;
+    font-size: 1rem;
+    color: $base-color-light;
+    font-weight: 600;
+}
+
+nav li a:hover {
+    color:$base-color
+}
+
+input {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ ul {
+    opacity: 1;
+    top: 3rem;
+}
+
+input[type=checkbox]:checked ~ label span:nth-child(2) {
+    width: 0rem !important;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked ~ label span:nth-child(1) {
+    width: 2rem !important;
+    transform: translate(0, 0.72rem) rotate(45deg);
+}
+
+input[type=checkbox]:checked ~ label span:nth-child(3) {
+    transform: translate(0, -0.72rem) rotate(-45deg);
+}
+
+input[type=checkbox]:not(:checked) ~ ul {
+    opacity: 0;
+}

@@ -1,6 +1,196 @@
 ---
 ---
 
-body{
-    background-color: rgb(109, 74, 216);
+
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import  '_sass/normalize.scss';
+@import  '_sass/colors.scss';
+@import  '_sass/vars.scss';
+@import  '_sass/grid.scss';
+@import  '_sass/nav.scss';
+
+
+body {
+  border-top: $accent-color 6px solid;
+  background-color: $light-color;
+  font-family: "Inter";
+  font-weight: 300;
+  line-height: 1.5;
+  color: $base-color;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+.logo {
+  text-decoration: none;
+  border: none;
+}
+
+.logo svg {
+  transition: rotate .2s;
+}
+
+.logo svg:hover {
+  rotate: -90deg;
+}
+
+a {
+  color: $base-color;
+  text-decoration: none;
+  border-bottom: 2px solid $accent-color;
+}
+
+a.cta-primary {
+  padding: 0.7rem 1rem;
+  background-color: $accent-color;
+  border: none;
+  color: $light-color;
+  border-radius: $border-radius;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+a.cta-primary:hover {
+  color: $light-color;
+  background-color: $accent-color-darker;
+}
+
+a:hover {
+  color: $accent-color-darker;
+  border-color: $accent-color-darker;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.fancy-font {
+  font-family: 'Baskerville';
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+#container {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 600px;
+}
+
+.catch {
+  @include row;
+  align-items: center;
+}
+
+.picture {
+  grid-column: m1-end/c3-end;
+}
+
+.picture img {
+  width: 100%;
+  max-width: 7rem;
+  border-radius: 100rem;
+}
+
+.caption {
+  grid-column: c4-start/m2-start;
+}
+
+.caption h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.caption ul {
+  list-style: none;
+  font-size: 0.9rem;
+  padding: 0;
+  margin: .2rem 0 0 0;
+  color: $base-color-light;
+}
+
+.hero {
+  margin-top: 2rem;  
+}
+
+.hero .presentation {
+  margin-top: 1rem;
+  @include row;
+}
+
+.hero .presentation p {
+  grid-column: c1-start/c12-end;
+  line-height: 1.8rem;
+}
+
+.ctas {
+  margin-top: 1.3rem;
+  @include row
+}
+
+.ctas-wrapper {
+  grid-column: c1-start/c12-end;
+}
+
+.latest-posts {
+  margin-top: 5rem;
+}
+
+.latest-posts a {
+  text-decoration: none;
+  border: none;
+}
+
+.title-wrapper {
+  @include row;
+}
+
+.title-wrapper h2 {
+  font-size: 1.3rem;
+  grid-column: m1-end/m2-start;
+}
+
+article {
+  @include row;
+  margin: .8rem 0;
+  line-height: 1.4rem;
+}
+
+.date {
+  grid-column: c1-start/c3-end;
+  color: $base-color-light;
+  font-size: 0.8rem;
+}
+
+.post-title {
+  grid-column: c4-start/c10-end;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.category-wrapper {
+  grid-column: c11-start/c12-end;
+  text-align: right;
+}
+
+.category {
+  padding: 0.3rem;
+  background-color: $accent-color;
+  color: $light-color;
+  font-weight: 500;
+  font-size: 0.7rem;
+  border-radius: $border-radius;
+}
+
+// POSTS
+
+.post-content {
+  @include row;
+}
+
+.post-wrapper {
+  grid-column: c1-start/c12-end;
 }
